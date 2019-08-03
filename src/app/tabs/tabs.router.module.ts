@@ -8,32 +8,32 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'study-tab',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../study-tab/study-tab.module').then(m => m.StudyPageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'schedule-tab',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../schedule-tab/schedule-tab.module').then(m => m.SchedulePageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'social-tab',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../social-tab/social-tab.module').then(m => m.SocialPageModule)
           }
         ]
       },
