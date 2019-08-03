@@ -1,9 +1,53 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-grid>
 
+    <ion-row>
+      <ion-col>
+        <img src="griffithLogo.png" alt="Griffith University Logo">
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <h1 id="griffithSSO">Griffith Single Sign-On</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h5>Username</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input placeholder="Username" required=true></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h5>Password</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input placeholder="Password" required=true></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/app']" routerLinkActive="router-link-active" >login<span>></span></ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p>Code of practice</p>
+        <p id="codeOfPractice">Information technology resources are essential for accomplishing Griffith University's mission. Members of the University community are granted shared access to these resources on condition they are used in accordance with the University's Information Technology 
+            Code of Practice. This Code of Practice applies irrespective of where the University information technology resources are accessed and used, and includes use at home. You can expect sanctions if you act irresponsibly and disregard your obligations under the Code of Practice. It is your responsibility to become familiar with the Code of Practice.</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>

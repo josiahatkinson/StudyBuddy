@@ -8,7 +8,7 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'study-tab',
+        path: 'study',
         children: [
           {
             path: '',
@@ -18,7 +18,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'schedule-tab',
+        path: 'schedule',
         children: [
           {
             path: '',
@@ -28,7 +28,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'social-tab',
+        path: 'social',
         children: [
           {
             path: '',
@@ -38,7 +38,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'settings-tab',
+        path: 'settings',
         children: [
           {
             path: '',
@@ -49,14 +49,19 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/settings-tab',
-        pathMatch: 'full'
-      }
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../study-tab/study-tab.module').then(m => m.StudyPageModule)
+          }
+        ]
+      },
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/settings-tab',
+    redirectTo: '/app/tabs/study',
     pathMatch: 'full'
   }
 ];
