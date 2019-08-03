@@ -1,28 +1,23 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>Welcome</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content>
+    <ion-grid>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col align-self-center>
-        <h1>Welcome to StudyBuddy!</h1>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col align-self-center>
-        <p>Use your Griffith ID to get started</p>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col align-self-center>
-        <ion-button shape="round">Sign in</ion-button>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <h1>Welcome to StudyBuddy!</h1>
+        </ion-col>
+      </ion-row>
 
-  </ion-grid>
+      <ion-row>
+        <ion-col>
+          <h2>Use your Griffith ID to get started</h2>
+        </ion-col>
+      </ion-row>
 
-</ion-content>
+      <ion-row>
+        <ion-col>
+          <ion-button shape="round" [routerLink]="['/login']" routerDirection="forward">Sign in</ion-button>
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+  </ion-content>
