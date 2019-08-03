@@ -38,15 +38,25 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'settings-tab',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../settings-tab/settings-tab.module').then(m => m.SettingsPageModule)
+          }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/settings-tab',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/settings-tab',
     pathMatch: 'full'
   }
 ];
