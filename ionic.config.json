@@ -1,5 +1,7 @@
 {
   "name": "StudyBuddy",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
