@@ -26,7 +26,7 @@ export class StudyPage {
     this.http.post(url, postBody, {headers: authHeaders}
     ).subscribe((response) => {
       this.griffithToken = response["access_token"];
-      console.log(this.griffithToken)
+      // console.log(this.griffithToken)
       // this needs to be moved out of this function! Just using for hackathon
       this.getGriffithData(this.griffithToken, 'https://www108.griffith.edu.au/gatekeeper-api/mycourses/v1')
     });
