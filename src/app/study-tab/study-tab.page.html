@@ -1,12 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Study Sessions Near You
-    </ion-title>
+    <ion-title>Study Sessions Near You</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="loadMap()" shape="round" fill="outline">
+        <ion-icon slot="start" name="locate"></ion-icon>Where I Am
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-text>{{courseData[0].name}}</ion-text>
-    
+  
+  <div class="map-wrapper">
+    <div id="map_center">
+      <img src="../../assets/icon/center_marker.png" />
+    </div>
+    <div #map id="map"></div>
+  </div>
+  <div id="address">
+    <span>{{address}}</span>
+  </div>
+  
 </ion-content>
